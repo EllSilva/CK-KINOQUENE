@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Responsivo Estiloso</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: #1e1e2f;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu li a:hover {
+      background-color: #2a2a40;
+      color: #00bcd4;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: linear-gradient(180deg, #1e1e2f 0%, #2c2c3e 100%);
+        display: none;
+        padding: 10px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        animation: slideDown 0.3s ease forwards;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .menu li {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #3a3a50;
+      }
+
+      .menu li:first-child {
+        border-top: none;
+      }
+
+      .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    /* Animação suave ao abrir menu */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MeuSite</div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="menu">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

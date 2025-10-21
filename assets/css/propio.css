@@ -1,0 +1,286 @@
+ 
+ 
+ 
+.perfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ .sb-mais {
+   color: #f9f7f6;
+ }
+
+ .sb-mais:hover {
+   color: color-mix(in srgb, var(--accent-color), transparent 25%);
+   text-decoration: none;
+ }
+
+ .imagem-fundo {
+   background-image: url('../img/construction/project-3.webp');
+   /* Substitua pela sua imagem */
+   background-size: cover;
+   background-position: center;
+   height: 50vh;
+   position: relative;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ /* Camada escura por cima da imagem */
+ .imagem-fundo::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+   /* ESCURECIMENTO AQUI */
+   z-index: 1;
+ }
+
+ .solicita {
+  position: relative;
+      z-index: 2; /* Para ficar acima do escurecimento */
+        
+ }
+  
+
+ .profile-img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 4px solid #007BFF;
+   flex-shrink: 0;
+ }
+
+ .info {
+   flex: 1;
+ }
+
+ .info h1 {
+   font-size: 32px;
+   margin-bottom: 10px;
+   color: #333;
+ }
+
+ .info h3 {
+   font-weight: normal;
+   color: #777;
+   margin-bottom: 20px;
+ }
+
+ .info p {
+   color: #555;
+   line-height: 1.6;
+   font-size: 16px;
+ }
+
+
+
+ .swiper {
+   width: 100%;
+   height: 91vh;
+ }
+
+ .swiper2 {
+   width: 100%;
+   height: 71vh;
+ }
+
+
+ .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   display: flex;
+ }
+
+ .swiper-slide img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* faz a imagem ocupar toda a largura */
+ }
+
+ .swiper-pagination-bullet {
+   width: 11px;
+   height: 11px;
+   background: #ccc;
+   opacity: 1;
+   transition: all 0.3s ease;
+   margin: 0 5px;
+   border-radius: 50%;
+ }
+
+ .swiper-pagination-bullet-active {
+   background: #007bff;
+   /* azul, por exemplo */
+   transform: scale(1.4);
+   /* efeito de zoom */
+ }
+
+
+ /* Reposiciona os botões */
+ .button-prev,
+ .button-next {
+   position: absolute;
+   left: 10px;
+   /* alinhado à esquerda */
+   width: 50px;
+   height: 50px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border-radius: 50%;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 220px;
+   margin-left: 70px;
+ }
+
+ /* Botão PREV mais acima */
+ .button-prev {
+   bottom: 160px;
+
+ }
+
+ /* Botão NEXT mais abaixo */
+ .button-next {
+   bottom: 120px;
+   left: 70px;
+ }
+
+ /* Remover setas padrão do Swiper (opcional) */
+ .swiper-button-prev::after,
+ .swiper-button-next::after {
+   font-size: 16px;
+ }
+
+
+ .serv-button-prev,
+ .serv-button-next {
+   /* alinhado à esquerda */
+   width: 60px;
+   height: 60px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border-radius: 50%;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   /* alinhado à esquerda */
+   margin-top: 100%;
+   margin-left: 10px;
+ }
+
+
+ .texto-sobreposto {
+   position: absolute;
+   top: 50%;
+   left: 37%;
+   transform: translate(-50%, -50%);
+   text-align: left;
+ }
+
+ .texto-slider {
+   width: 60%;
+   color: rgb(255, 255, 255);
+   font-size: 38px;
+   font-weight: bold;
+   /* Para melhorar a legibilidade */
+   padding-bottom: 100px;
+ }
+
+
+ .titulo {
+   font-size: 81px;
+   font-weight: bold;
+ }
+
+ @media (max-width: 768px) {
+
+   .sb-mais {
+     color: color-mix(in srgb, var(--accent-color), transparent 25%);
+   }
+
+   .sb-mais:hover {
+     color: #1a1a1a;
+     text-decoration: none;
+   }
+
+   /* Reposiciona os botões */
+   .button-prev,
+   .button-next {
+     /* alinhado à esquerda */
+     width: 50px;
+     height: 50px;
+     background-color: rgba(0, 0, 0, 0.5);
+     margin-top: -10px;
+     margin-left: 20px;
+   }
+
+   .serv-button-prev,
+   .serv-button-next {
+
+     /* alinhado à esquerda */
+     width: 60px;
+     height: 60px;
+     background-color: rgba(0, 0, 0, 0.5);
+     color: white;
+
+     margin-top: 20%;
+     margin-left: 10px;
+   }
+
+
+   .titulo {
+     font-size: 41px;
+     font-weight: bold;
+   }
+
+   .swiper {
+     height: 71vh;
+   }
+
+   .texto-sobreposto {
+     position: absolute;
+     top: 380px;
+     left: 48%;
+     transform: translate(-50%, -50%);
+     text-align: left;
+   }
+
+   .texto-slider {
+     width: 310px;
+     color: rgb(26, 26, 26);
+     font-size: 22px;
+     /* Para melhorar a legibilidade */
+     padding-bottom: 20px;
+   }
+
+   .swiper-slide img {
+     height: 53%;
+   }
+
+ }

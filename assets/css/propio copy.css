@@ -1,0 +1,155 @@
+  .swiper {
+    width: 100%;
+    height: 91vh;
+  }
+  .swiper2 {
+    width: 100%;
+    height: 71vh;
+  }
+
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* faz a imagem ocupar toda a largura */
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background: #ccc;
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #007bff;
+    /* azul, por exemplo */
+    transform: scale(1.4);
+    /* efeito de zoom */
+  }
+
+
+  /* Reposiciona os botões */
+  .button-prev,
+  .button-next {
+    position: absolute;
+    left: 10px;
+    /* alinhado à esquerda */
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 240px;
+  }
+
+  /* Botão PREV mais acima */
+  .button-prev {
+    bottom: 160px;
+
+  }
+
+  /* Botão NEXT mais abaixo */
+  .button-next {
+    bottom: 120px;
+    left: 60px;
+  }
+
+  /* Remover setas padrão do Swiper (opcional) */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+  }
+
+
+  .serv-button-prev,
+  .serv-button-next {
+    position: absolute;
+    left: 10px;
+    /* alinhado à esquerda */
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
+
+  .texto-sobreposto {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+
+  .texto-slider {
+    width: 60%;
+    color: rgb(41, 41, 41);
+    font-size: 44px;
+    font-weight: bold;
+    /* Para melhorar a legibilidade */
+    padding-bottom: 100px;
+  }
+
+
+  .titulo {
+    font-size: 81px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+
+    .titulo {
+      font-size: 41px;
+      font-weight: bold;
+    }
+
+    .swiper {
+      height: 61vh;
+    }
+
+    .texto-sobreposto {
+      position: absolute;
+      top: 310px;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+    }
+
+    .texto-slider {
+      width: 100%;
+      color: rgb(26, 26, 26);
+      font-size: 22px;
+      /* Para melhorar a legibilidade */
+      padding-bottom: 30px;
+    }
+
+    .swiper-slide img {
+      height: 53%;
+    }
+
+  }
